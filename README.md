@@ -25,29 +25,27 @@ The $l wrapper has three main uses:
 * Selects elements via tags, css selectors or id, `$l(".hidden") or $l("div") or $l("blue-item")`
 
 ### DOM Traversal
-find(selector). 
+`DOMNodeCollection#find(selector)` 
 Returns a DOMNodeCollection of all the nodes that match the argument that are children of the DOMNodeCollection nodes.  
 
 
-children(). 
+`DOMNodeCollection#children()` 
 
 Returns a DOMNodeCollection of all children of all nodes within the DOMNodeCollection.  
 
 `$l(".hidden").children()`
 
-parent()    
+`DOMNodeCollection#parent()`   
 
 Returns a DOMNodeCollection of the parent of all nodes within the DOMNodeCollection.  
 `$l(".hidden").parent()`. 
   
-  remove()  
-
-
+`DOMNodeCollection#remove()`
 Removes the element from the DOM.
 
 ### Event Handling
 
-on(action,cb). 
+`DOMNodeCollection#on(action,cb)` 
 Installs an 'action' event handler. When triggered runs the cb callback.
 `$l(".addtodo-button").on("click", () => {
   const inp = $l(".hidden")
@@ -56,33 +54,33 @@ Installs an 'action' event handler. When triggered runs the cb callback.
 });`
 
 
-off(action). 
+`DOMNodeCollection#off(action)` 
 Removes the 'action' listener from the DOM
 
 
 ### Manipulation
 
-*addClass(className)
+`DOMNodeCollection#addClass(className)`
 
 Adds a class attritube to all nodes within the DOMNodeCollection.  
 `todoTitle.addClass("todo-title");`
 
-*removeClass(className)
+`DOMNodeCollection#removeClass(className)`
 
 Remove a class attritube of all nodes within the DOMNodeCollection.  
 `todoTitle.removeClass("todo-title");`
 
-* append(arg)
+`DOMNodeCollection#append(arg)`
 arg can be a string, HTMLElement, or DOMNodeCollection object
 Appends the outerHTML of each element in the argument to the innerHTML of ALL nodes within the DOMNodeCollection.
 `todoTitle.append(`${title}`);`
 `newTodo.append(subButton);` where subButton is an instance of DOMNodeCollection
 
-*empty()
+`DOMNodeCollection#empty()`
 
 Clears the content from all nodes within the DOMNodeCollection.
 
-*attr(key, [value])
+`DOMNodeCollection#attr(key, [value])`
 
 Accepts a key and optional value. 
 If the value exists, it will add that value and key to all nodes within the DOMNodeCollection.
