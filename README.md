@@ -2,7 +2,7 @@
 A JavaScript DOM Manipulation Library
 
 ## Description
-DOMquery is a DOM Manupulation library inspired by jQuery and written in vanilla JavaScript. 
+DOMquery is a DOM Manipulation library inspired by jQuery and written in vanilla JavaScript. 
 Functionalities include:
 
 * Creating DOM Elements
