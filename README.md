@@ -45,6 +45,7 @@ Removes the element from the DOM.
 
 **`#on(action,cb)`** 
 Installs an 'action' event handler. When triggered runs the cb callback.
+
 `$l(".addtodo-button").on("click", () => {
   const inp = $l(".hidden")
   inp.removeClass("hidden")
