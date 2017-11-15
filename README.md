@@ -26,24 +26,29 @@ The $l wrapper has three main uses:
 
 ### DOM Traversal
 **`#find(selector)`** 
+
 Returns a `DOMNodeCollection` of all the nodes that match the argument that are children of the `DOMNodeCollection` nodes.  
 
 
 **`#children()`** 
+
 Returns a `DOMNodeCollection` of all children of all nodes within the `DOMNodeCollection`.  
 
 `$l(".hidden").children()`
 
-**`#parent()`**   
+**`#parent()`**  
+
 Returns a `DOMNodeCollection` of the parent of all nodes within the `DOMNodeCollection`.  
 `$l(".hidden").parent()`. 
   
 **`#remove()`**
+
 Removes the element from the DOM.
 
 ### Event Handling
 
 **`#on(action,cb)`** 
+
 Installs an 'action' event handler. When triggered runs the cb callback.
 
 `$l(".addtodo-button").on("click", () => {
@@ -54,6 +59,7 @@ Installs an 'action' event handler. When triggered runs the cb callback.
 
 
 **`#off(action)`** 
+
 Removes the 'action' listener from the DOM
 
 
@@ -70,6 +76,7 @@ Remove a class attritube of all nodes within the `DOMNodeCollection`.
 `todoTitle.removeClass("todo-title");`
 
 **`#append(arg)`**
+
 arg can be a string, HTMLElement, or `DOMNodeCollection` object
 Appends the outerHTML of each element in the argument to the innerHTML of ALL nodes within the `DOMNodeCollection`.
 `todoTitle.append(${title});`
